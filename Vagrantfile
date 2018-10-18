@@ -18,7 +18,7 @@ $conda_installation = <<SCRIPT
 SCRIPT
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
-  config.vm.box = "ubuntu/bionic64"
+  config.vm.box = "bento/ubuntu-18.04"
   config.vm.hostname = "conda"
   config.vm.network "forwarded_port", guest: 8888, host: 8080
   config.vm.provider "virtualbox" do |v|
